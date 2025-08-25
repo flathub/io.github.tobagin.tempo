@@ -5,10 +5,13 @@ sdk: org.gnome.Sdk
 command: tempo
 
 finish-args:
+  # UI permissions (minimal for GTK4/Libadwaita)
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+  
+  # Audio permissions (essential for metronome)
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0:ro
 
@@ -33,14 +36,14 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
-        tag: v0.18.0
-        commit: 07c9c9df9cd1b6b4454ecba21ee58211e9144a4b
+        tag: v1.2.1
+        commit: 93fe4dd5a0d8c6530850c04eee01d4d0cdfddfd3
         
   # Main application (PyGObject already included in GNOME Platform)
   - name: tempo
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/tobagin/tempo.git
-        tag: v1.1.8
-        commit: 8f8ab3cf98a0e98efa7bd282ce8ec58086eec25c
+        url: https://github.com/tobagin/Tempo.git
+        tag: v1.2.1
+        commit: 93fe4dd5a0d8c6530850c04eee01d4d0cdfddfd3
