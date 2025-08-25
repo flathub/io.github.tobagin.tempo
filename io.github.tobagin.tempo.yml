@@ -5,10 +5,13 @@ sdk: org.gnome.Sdk
 command: tempo
 
 finish-args:
+  # UI permissions (minimal for GTK4/Libadwaita)
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+  
+  # Audio permissions (essential for metronome)
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0:ro
 
@@ -41,6 +44,6 @@ modules:
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/tobagin/tempo.git
-        tag: v1.1.8
-        commit: 8f8ab3cf98a0e98efa7bd282ce8ec58086eec25c
+        url: https://github.com/tobagin/Tempo.git
+        tag: v1.2.1
+        commit: 4d31adda618cfa92d6d0e87be544d6a981d50b63
