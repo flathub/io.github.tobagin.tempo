@@ -29,21 +29,11 @@ cleanup:
   - '*.a'
 
 modules:
-  # Blueprint compiler (build-time only, cleaned up after)
-  - name: blueprint-compiler
-    buildsystem: meson
-    cleanup: ['*']
-    sources:
-      - type: git
-        url: https://gitlab.gnome.org/GNOME/blueprint-compiler.git
-        tag: v0.18.0
-        commit: 07c9c9df9cd1b6b4454ecba21ee58211e9144a4b
-        
   # Main application (PyGObject already included in GNOME Platform)
   - name: tempo
     buildsystem: meson
     sources:
       - type: git
         url: https://github.com/tobagin/Tempo.git
-        tag: v1.3.0
-        commit: 6af9d8ff6cac224d8b51f0db6ce5b4bac2caeae5
+        tag: v1.4.0
+        commit: 07b62189d63ead3d6cec82a65a3bde15fdd80059
