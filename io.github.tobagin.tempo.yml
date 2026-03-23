@@ -1,6 +1,6 @@
 app-id: io.github.tobagin.tempo
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: tempo
 
@@ -35,5 +35,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/tobagin/Tempo.git
-        tag: v1.5.1
-        commit: 3cf128953c96d5fe7a9c706f04ef53af0a89346e
+        tag: v1.5.2
+        commit: 38f703be5c644100730b59c63c717b470c978389
