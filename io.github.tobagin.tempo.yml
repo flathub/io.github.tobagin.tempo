@@ -15,19 +15,6 @@ finish-args:
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0:ro
 
-cleanup:
-  - /include
-  - /lib/pkgconfig
-  - /share/pkgconfig
-  - /share/aclocal
-  - /man
-  - /share/man
-  - /share/gtk-doc
-  - /share/vala
-  - /share/devhelp
-  - '*.la'
-  - '*.a'
-
 modules:
   # Main application (PyGObject already included in GNOME Platform)
   - name: tempo
